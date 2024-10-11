@@ -1,0 +1,480 @@
+CRITICAL - 2023-12-07 03:32:56 --> Undefined variable $nama_barang
+in APPPATH\Views\lelang.php on line 49.
+ 1 APPPATH\Views\lelang.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama_barang', 'D:\\lelang\\app\\Views\\lelang.php', 49)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(323): view('lelang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 03:51:37 --> Too few arguments to function App\Models\Gudang::join(), 1 passed in D:\lelang\app\Controllers\Home.php on line 320 and exactly 3 expected
+in APPPATH\Models\Gudang.php on line 28.
+ 1 APPPATH\Controllers\Home.php(320): App\Models\Gudang->join('tb_lelang.id_lelang=tb_barang.nama_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 03:51:47 --> Too few arguments to function App\Models\Gudang::join(), 1 passed in D:\lelang\app\Controllers\Home.php on line 320 and exactly 3 expected
+in APPPATH\Models\Gudang.php on line 28.
+ 1 APPPATH\Controllers\Home.php(320): App\Models\Gudang->join('tb_lelang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 03:52:20 --> Too few arguments to function App\Models\Gudang::join(), 1 passed in D:\lelang\app\Controllers\Home.php on line 321 and exactly 3 expected
+in APPPATH\Models\Gudang.php on line 28.
+ 1 APPPATH\Controllers\Home.php(321): App\Models\Gudang->join('tb_lelang.id_lelang=id_barang.nama_barnag')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 04:05:48 --> Too few arguments to function App\Models\Gudang::joinhistory(), 4 passed in D:\lelang\app\Controllers\Home.php on line 321 and exactly 9 expected
+in APPPATH\Models\Gudang.php on line 75.
+ 1 APPPATH\Controllers\Home.php(321): App\Models\Gudang->joinhistory('tb_lelang', 'tb_barang', 'tb_lelang.id_barang=tb_barang.nama_barang', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 04:06:50 --> Too few arguments to function App\Models\Gudang::joinhistory(), 4 passed in D:\lelang\app\Controllers\Home.php on line 321 and exactly 9 expected
+in APPPATH\Models\Gudang.php on line 75.
+ 1 APPPATH\Controllers\Home.php(321): App\Models\Gudang->joinhistory('tb_lelang', 'tb_barang', 'tb_lelang.id_barang=tb_barang.nama_barang', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+ERROR - 2023-12-07 04:12:02 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\lelang\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\lelang\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'lelang', 3306, '', 0)
+#1 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\lelang\app\Models\Gudang.php(15): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\lelang\app\Controllers\Home.php(657): App\Models\Gudang->tampil('tb_barang')
+#6 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->pdf()
+#7 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\lelang\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\lelang\app\Models\Gudang.php(15): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\lelang\app\Controllers\Home.php(657): App\Models\Gudang->tampil('tb_barang')
+#5 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->pdf()
+#6 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#10 {main}
+CRITICAL - 2023-12-07 04:12:02 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_barang`', [], false)
+ 3 APPPATH\Models\Gudang.php(15): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(657): App\Models\Gudang->tampil('tb_barang')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 09:59:54 --> Undefined property: stdClass::$nama_barang
+in APPPATH\Views\lelang.php on line 49.
+ 1 APPPATH\Views\lelang.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_barang', 'D:\\lelang\\app\\Views\\lelang.php', 49)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(323): view('lelang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+ERROR - 2023-12-07 10:00:32 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`nama_barang`' at line 2 in D:\lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\lelang\app\Models\Gudang.php(15): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\lelang\app\Controllers\Home.php(320): App\Models\Gudang->tampil('tb_lelang.id_le...')
+#6 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->lelang()
+#7 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-07 10:00:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`nama_barang`' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_lelang`.`id_lelang=tb_barang`.`nama_barang`', [], false)
+ 2 APPPATH\Models\Gudang.php(15): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(320): App\Models\Gudang->tampil('tb_lelang.id_lelang=tb_barang.nama_barang')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 10:08:09 --> Undefined variable $satu
+in APPPATH\Views\lelang.php on line 50.
+ 1 APPPATH\Views\lelang.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satu', 'D:\\lelang\\app\\Views\\lelang.php', 50)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(323): view('lelang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+ERROR - 2023-12-07 10:08:25 --> mysqli_sql_exception: Unknown column 'id_user' in 'where clause' in D:\lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\lelang\system\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\lelang\app\Models\Gudang.php(49): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 D:\lelang\app\Controllers\Home.php(321): App\Models\Gudang->getWhere('tb_barang', Array)
+#6 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->lelang()
+#7 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-07 10:08:25 --> Unknown column 'id_user' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_barang`
+WHERE `id_user` = :id_user:', [...], false)
+ 2 APPPATH\Models\Gudang.php(49): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 3 APPPATH\Controllers\Home.php(321): App\Models\Gudang->getWhere('tb_barang', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 10:08:40 --> Undefined variable $satu
+in APPPATH\Views\lelang.php on line 50.
+ 1 APPPATH\Views\lelang.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satu', 'D:\\lelang\\app\\Views\\lelang.php', 50)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(324): view('lelang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+ERROR - 2023-12-07 10:09:29 --> mysqli_sql_exception: Unknown column 'id_user' in 'where clause' in D:\lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\lelang\system\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\lelang\app\Models\Gudang.php(49): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 D:\lelang\app\Controllers\Home.php(321): App\Models\Gudang->getWhere('tb_barang', Array)
+#6 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->lelang()
+#7 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-12-07 10:09:29 --> Unknown column 'id_user' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_barang`
+WHERE `id_user` = :id_user:', [...], false)
+ 2 APPPATH\Models\Gudang.php(49): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 3 APPPATH\Controllers\Home.php(321): App\Models\Gudang->getWhere('tb_barang', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 10:09:50 --> Undefined variable $satu
+in APPPATH\Views\lelang.php on line 50.
+ 1 APPPATH\Views\lelang.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satu', 'D:\\lelang\\app\\Views\\lelang.php', 50)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(325): view('lelang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 10:12:17 --> Undefined property: stdClass::$password
+in APPPATH\Views\lelang.php on line 51.
+ 1 APPPATH\Views\lelang.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$password', 'D:\\lelang\\app\\Views\\lelang.php', 51)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(325): view('lelang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 10:15:44 --> Undefined property: stdClass::$nama_barang
+in APPPATH\Views\lelang.php on line 49.
+ 1 APPPATH\Views\lelang.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_barang', 'D:\\lelang\\app\\Views\\lelang.php', 49)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(325): view('lelang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 10:15:57 --> Too few arguments to function App\Models\Gudang::join(), 2 passed in D:\lelang\app\Controllers\Home.php on line 322 and exactly 3 expected
+in APPPATH\Models\Gudang.php on line 28.
+ 1 APPPATH\Controllers\Home.php(322): App\Models\Gudang->join('tb_barang', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 10:16:04 --> Undefined property: stdClass::$nama_barang
+in APPPATH\Views\lelang.php on line 49.
+ 1 APPPATH\Views\lelang.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_barang', 'D:\\lelang\\app\\Views\\lelang.php', 49)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(325): view('lelang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 10:16:16 --> Undefined property: stdClass::$nama_barang
+in APPPATH\Views\lelang.php on line 49.
+ 1 APPPATH\Views\lelang.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_barang', 'D:\\lelang\\app\\Views\\lelang.php', 49)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(325): view('lelang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 10:21:43 --> Attempt to read property "nama_barang" on string
+in APPPATH\Views\lelang.php on line 49.
+ 1 APPPATH\Views\lelang.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_barang" on string', 'D:\\lelang\\app\\Views\\lelang.php', 49)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(325): view('lelang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 10:26:08 --> syntax error, unexpected token "}"
+in APPPATH\Views\lelang.php on line 54.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('lelang', [], true)
+ 3 APPPATH\Controllers\Home.php(325): view('lelang', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 10:26:11 --> Unclosed '{' on line 45
+in APPPATH\Views\lelang.php on line 101.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('lelang', [], true)
+ 3 APPPATH\Controllers\Home.php(325): view('lelang', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 10:27:19 --> Undefined property: stdClass::$nama_barangg
+in APPPATH\Views\lelang.php on line 52.
+ 1 APPPATH\Views\lelang.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_barangg', 'D:\\lelang\\app\\Views\\lelang.php', 52)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(325): view('lelang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 10:36:37 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 321.
+ 1 APPPATH\Controllers\Home.php(321): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 321)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 10:39:55 --> syntax error, unexpected token "public", expecting end of file
+in APPPATH\Controllers\Home.php on line 348.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\lelang\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 10:40:09 --> Undefined variable $satu
+in APPPATH\Views\lelang.php on line 49.
+ 1 APPPATH\Views\lelang.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $satu', 'D:\\lelang\\app\\Views\\lelang.php', 49)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\lelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('lelang', [], true)
+ 5 APPPATH\Controllers\Home.php(323): view('lelang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 11:00:40 --> Invalid cell coordinate D1D2
+in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Cell\Coordinate.php on line 43.
+ 1 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Style\Style.php(229): PhpOffice\PhpSpreadsheet\Cell\Coordinate::coordinateFromString('D1D2')
+ 2 APPPATH\Controllers\Home.php(728): PhpOffice\PhpSpreadsheet\Style\Style->applyFromArray([...])
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+ERROR - 2023-12-07 23:47:56 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\lelang\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\lelang\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'lelang', 3306, '', 0)
+#1 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\lelang\system\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\lelang\app\Models\Gudang.php(49): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 D:\lelang\app\Controllers\Home.php(599): App\Models\Gudang->getWhere('tb_admin', Array)
+#6 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->aksi_login()
+#7 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\lelang\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\lelang\system\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\lelang\app\Models\Gudang.php(49): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#4 D:\lelang\app\Controllers\Home.php(599): App\Models\Gudang->getWhere('tb_admin', Array)
+#5 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->aksi_login()
+#6 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#10 {main}
+CRITICAL - 2023-12-07 23:47:56 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_admin`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 3 APPPATH\Models\Gudang.php(49): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 4 APPPATH\Controllers\Home.php(599): App\Models\Gudang->getWhere('tb_admin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->aksi_login()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 23:50:19 --> Undefined variable $manda
+in APPPATH\Views\tambahlelang.php on line 38.
+ 1 APPPATH\Views\tambahlelang.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $manda', 'D:\\lelang\\app\\Views\\tambahlelang.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\tambahlelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tambahlelang', [], true)
+ 5 APPPATH\Controllers\Home.php(341): view('tambahlelang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahlelang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 23:51:33 --> Undefined variable $manda
+in APPPATH\Views\tambahlelang.php on line 121.
+ 1 APPPATH\Views\tambahlelang.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $manda', 'D:\\lelang\\app\\Views\\tambahlelang.php', 121)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\tambahlelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tambahlelang', [], true)
+ 5 APPPATH\Controllers\Home.php(341): view('tambahlelang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahlelang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 23:53:14 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\tambahlelang.php on line 38.
+ 1 APPPATH\Views\tambahlelang.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'D:\\lelang\\app\\Views\\tambahlelang.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\tambahlelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tambahlelang', [], true)
+ 5 APPPATH\Controllers\Home.php(341): view('tambahlelang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahlelang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 23:55:02 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\tambahlelang.php on line 30.
+ 1 APPPATH\Views\tambahlelang.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'D:\\lelang\\app\\Views\\tambahlelang.php', 30)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\tambahlelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tambahlelang', [], true)
+ 5 APPPATH\Controllers\Home.php(341): view('tambahlelang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahlelang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 23:56:51 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\tambahlelang.php on line 30.
+ 1 APPPATH\Views\tambahlelang.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'D:\\lelang\\app\\Views\\tambahlelang.php', 30)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\tambahlelang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tambahlelang', [], true)
+ 5 APPPATH\Controllers\Home.php(341): view('tambahlelang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahlelang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 23:59:17 --> Unclosed '{' on line 31
+in APPPATH\Views\tambahlelang.php on line 95.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tambahlelang', [], true)
+ 3 APPPATH\Controllers\Home.php(341): view('tambahlelang', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahlelang()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-07 23:59:25 --> Unclosed '{' on line 31
+in APPPATH\Views\tambahlelang.php on line 95.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('tambahlelang', [], true)
+ 3 APPPATH\Controllers\Home.php(341): view('tambahlelang', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahlelang()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')

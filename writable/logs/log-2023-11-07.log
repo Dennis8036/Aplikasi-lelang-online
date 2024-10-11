@@ -1,0 +1,568 @@
+CRITICAL - 2023-11-07 02:02:23 --> syntax error, unexpected token "."
+in APPPATH\Views\header.php on line 18.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('header', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('header')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 11:05:11 --> Invalid file: "dashboard.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('dashboard', [], true)
+ 3 APPPATH\Controllers\Home.php(14): view('dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+ERROR - 2023-11-07 11:16:35 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\lelang\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\lelang\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\lelang\app\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\lelang\app\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+#6 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->barang()
+#7 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\lelang\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\lelang\app\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\lelang\app\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+#5 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->barang()
+#6 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#10 {main}
+CRITICAL - 2023-11-07 11:16:35 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 3 APPPATH\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->barang()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+ERROR - 2023-11-07 11:17:14 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\lelang\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\lelang\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', 'lelang', 3306, '', 0)
+#1 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\lelang\app\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\lelang\app\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+#6 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->barang()
+#7 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\lelang\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\lelang\app\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\lelang\app\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+#5 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->barang()
+#6 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#10 {main}
+CRITICAL - 2023-11-07 11:17:14 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 3 APPPATH\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->barang()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+ERROR - 2023-11-07 11:17:16 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\lelang\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\lelang\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', 'lelang', 3306, '', 0)
+#1 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\lelang\app\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\lelang\app\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+#6 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->barang()
+#7 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\lelang\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\lelang\app\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\lelang\app\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+#5 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->barang()
+#6 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#10 {main}
+CRITICAL - 2023-11-07 11:17:16 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 3 APPPATH\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->barang()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+ERROR - 2023-11-07 11:17:16 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\lelang\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\lelang\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', 'lelang', 3306, '', 0)
+#1 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\lelang\app\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\lelang\app\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+#6 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->barang()
+#7 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\lelang\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\lelang\app\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\lelang\app\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+#5 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->barang()
+#6 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#10 {main}
+CRITICAL - 2023-11-07 11:17:16 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 3 APPPATH\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->barang()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+ERROR - 2023-11-07 11:17:17 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\lelang\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\lelang\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', 'lelang', 3306, '', 0)
+#1 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\lelang\app\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\lelang\app\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+#6 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->barang()
+#7 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\lelang\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\lelang\app\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\lelang\app\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+#5 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->barang()
+#6 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#10 {main}
+CRITICAL - 2023-11-07 11:17:17 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 3 APPPATH\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->barang()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+ERROR - 2023-11-07 11:17:17 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\lelang\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\lelang\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', 'lelang', 3306, '', 0)
+#1 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\lelang\app\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\lelang\app\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+#6 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->barang()
+#7 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\lelang\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\lelang\app\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\lelang\app\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+#5 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->barang()
+#6 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#10 {main}
+CRITICAL - 2023-11-07 11:17:17 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 3 APPPATH\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->barang()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+ERROR - 2023-11-07 11:17:22 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\lelang\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\lelang\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', 'lelang', 3306, '', 0)
+#1 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\lelang\app\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\lelang\app\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+#6 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->barang()
+#7 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\lelang\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\lelang\app\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\lelang\app\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+#5 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->barang()
+#6 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#10 {main}
+CRITICAL - 2023-11-07 11:17:22 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 3 APPPATH\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->barang()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+ERROR - 2023-11-07 11:19:15 --> mysqli_sql_exception: Table 'lelang.barang' doesn't exist in D:\lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\lelang\app\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\lelang\app\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+#6 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->barang()
+#7 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-11-07 11:19:15 --> Table 'lelang.barang' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 2 APPPATH\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->barang()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+ERROR - 2023-11-07 11:21:16 --> mysqli_sql_exception: Table 'lelang.barang' doesn't exist in D:\lelang\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\lelang\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\lelang\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\lelang\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\lelang\app\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\lelang\app\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+#6 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->tb_barang()
+#7 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#11 {main}
+CRITICAL - 2023-11-07 11:21:16 --> Table 'lelang.barang' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 2 APPPATH\Models\Gudang.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(23): App\Models\Gudang->tampil('barang')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tb_barang()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 11:25:17 --> Undefined variable $manda
+in APPPATH\Views\barang.php on line 42.
+ 1 APPPATH\Views\barang.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $manda', 'D:\\lelang\\app\\Views\\barang.php', 42)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\barang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('barang', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('barang')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->barang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 11:25:39 --> Undefined variable $manda
+in APPPATH\Views\barang.php on line 42.
+ 1 APPPATH\Views\barang.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $manda', 'D:\\lelang\\app\\Views\\barang.php', 42)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\barang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('barang', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('barang')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->barang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 11:31:13 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 11:31:30 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 11:38:19 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 11:39:19 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 11:40:15 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 11:40:16 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 11:40:38 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 11:43:42 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 11:44:10 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 11:44:16 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 11:45:45 --> Undefined property: stdClass::$nama_brg
+in APPPATH\Views\barang.php on line 47.
+ 1 APPPATH\Views\barang.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_brg', 'D:\\lelang\\app\\Views\\barang.php', 47)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\lelang\\app\\Views\\barang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('barang', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('barang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->barang()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 11:47:14 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 11:48:21 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 11:48:23 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 11:50:03 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 11:53:40 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 23:52:52 --> Too few arguments to function App\Controllers\Home::hapus_barang(), 0 passed in D:\lelang\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 66.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->hapus_barang()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 23:57:18 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 23:58:01 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 23:58:24 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 23:59:09 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 23:59:19 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-07 23:59:24 --> Too few arguments to function App\Models\Gudang::tambah(), 1 passed in D:\lelang\app\Controllers\Home.php on line 37 and exactly 2 expected
+in APPPATH\Models\Gudang.php on line 15.
+ 1 APPPATH\Controllers\Home.php(37): App\Models\Gudang->tambah('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahbarang()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')

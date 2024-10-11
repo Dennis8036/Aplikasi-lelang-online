@@ -1,0 +1,929 @@
+ERROR - 2023-12-02 10:16:14 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\lelang\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\lelang\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'lelang', 3306, '', 0)
+#1 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\lelang\system\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\lelang\app\Models\Gudang.php(49): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 D:\lelang\app\Controllers\Home.php(578): App\Models\Gudang->getWhere('tb_admin', Array)
+#6 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->aksi_login()
+#7 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\lelang\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\lelang\system\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\lelang\app\Models\Gudang.php(49): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#4 D:\lelang\app\Controllers\Home.php(578): App\Models\Gudang->getWhere('tb_admin', Array)
+#5 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->aksi_login()
+#6 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#10 {main}
+CRITICAL - 2023-12-02 10:16:14 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_admin`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 3 APPPATH\Models\Gudang.php(49): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 4 APPPATH\Controllers\Home.php(578): App\Models\Gudang->getWhere('tb_admin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->aksi_login()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:17:05 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:17:09 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:17:12 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:17:14 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:17:17 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:17:19 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:17:23 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:17:31 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:17:38 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:20:59 --> Call to undefined method App\Controllers\Home::model()
+in APPPATH\Controllers\Home.php on line 656.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:21:00 --> Call to undefined method App\Controllers\Home::model()
+in APPPATH\Controllers\Home.php on line 656.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:21:01 --> Call to undefined method App\Controllers\Home::model()
+in APPPATH\Controllers\Home.php on line 656.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:21:04 --> Call to undefined method App\Controllers\Home::model()
+in APPPATH\Controllers\Home.php on line 656.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:21:16 --> Call to undefined method App\Controllers\Home::model()
+in APPPATH\Controllers\Home.php on line 656.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:21:25 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:21:32 --> Undefined property: App\Controllers\Home::$Models
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Models', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:21:36 --> Undefined property: App\Controllers\Home::$model
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$model', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:21:39 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:22:03 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:22:09 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:22:34 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:22:34 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:22:35 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:22:35 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:22:35 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:22:35 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:23:47 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:23:50 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:23:55 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:24:36 --> Array and string offset access syntax with curly braces is no longer supported
+in APPPATH\PHPExcel-1.8\Classes\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-02 10:24:46 --> Array and string offset access syntax with curly braces is no longer supported
+in APPPATH\PHPExcel-1.8\Classes\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-02 10:24:49 --> Array and string offset access syntax with curly braces is no longer supported
+in APPPATH\PHPExcel-1.8\Classes\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-02 10:24:58 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::get()
+in APPPATH\Models\Gudang.php on line 10.
+ 1 APPPATH\Controllers\Home.php(657): App\Models\Gudang->tampil_data('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:25:32 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::get()
+in APPPATH\Models\Gudang.php on line 10.
+ 1 APPPATH\Controllers\Home.php(657): App\Models\Gudang->tampil_data('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:25:34 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::get()
+in APPPATH\Models\Gudang.php on line 10.
+ 1 APPPATH\Controllers\Home.php(657): App\Models\Gudang->tampil_data('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:25:34 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::get()
+in APPPATH\Models\Gudang.php on line 10.
+ 1 APPPATH\Controllers\Home.php(657): App\Models\Gudang->tampil_data('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:25:42 --> Array and string offset access syntax with curly braces is no longer supported
+in APPPATH\PHPExcel-1.8\Classes\PHPExcel\Shared\String.php on line 526.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-02 10:25:53 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::get()
+in APPPATH\Models\Gudang.php on line 10.
+ 1 APPPATH\Controllers\Home.php(657): App\Models\Gudang->tampil_data('tb_barang')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:28:47 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:28:47 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:28:48 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:28:48 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:28:49 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:30:17 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 655.
+ 1 APPPATH\Controllers\Home.php(655): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 655)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:30:18 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 655.
+ 1 APPPATH\Controllers\Home.php(655): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 655)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:30:20 --> Class "App\Controllers\Gudang" not found
+in APPPATH\Controllers\Home.php on line 273.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->barang()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:30:26 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:30:34 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:34:33 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:34:39 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:34:42 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:35:43 --> Invalid file: "dompdf_gen.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dompdf_gen.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('dompdf_gen', [], true)
+ 3 APPPATH\Controllers\Home.php(633): view('dompdf_gen')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:35:50 --> Invalid file: "dompdf.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dompdf.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('dompdf', [], true)
+ 3 APPPATH\Controllers\Home.php(633): view('dompdf')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:35:54 --> Invalid file: "dompdf_gen.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dompdf_gen.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('dompdf_gen', [], true)
+ 3 APPPATH\Controllers\Home.php(633): view('dompdf_gen')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:36:03 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:42:44 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:44:22 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:44:26 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:45:35 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:45:37 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:46:26 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:46:27 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:46:29 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:46:34 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:46:44 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:46:48 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:48:21 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:48:24 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:48:45 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:48:48 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:49:08 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:49:12 --> Undefined property: App\Controllers\Home::$get
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$get', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:49:31 --> Undefined property: App\Controllers\Home::$db
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$db', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:49:36 --> Undefined property: App\Controllers\Home::$table
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$table', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:49:39 --> Undefined property: App\Controllers\Home::$tabel
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$tabel', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:49:43 --> Undefined property: App\Controllers\Home::$db
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$db', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:55:00 --> Undefined property: App\Controllers\Home::$db
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$db', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:55:14 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:55:14 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:55:15 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:55:15 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:58:45 --> Class "App\Models\CI_Model" not found
+in APPPATH\Models\Gudang.php on line 7.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(306): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\lelang\\app\\Models\\Gudang.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Gudang')
+ 4 APPPATH\Controllers\Home.php(274): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Gudang')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->barang()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 10:59:21 --> Class "CI_Model" not found
+in APPPATH\Models\Gudang.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(306): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\lelang\\app\\Models\\Gudang.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Gudang')
+ 4 APPPATH\Controllers\Home.php(274): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Gudang')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->barang()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:01:44 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:01:48 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:03:51 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:03:57 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:03:59 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:04:02 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:05:37 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:05:38 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:11:59 --> syntax error, unexpected fully qualified name "\Models\Gudang"
+in APPPATH\Controllers\Home.php on line 635.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\lelang\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:12:04 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:13:29 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 632.
+ 1 APPPATH\Controllers\Home.php(632): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 632)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:13:29 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 632.
+ 1 APPPATH\Controllers\Home.php(632): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 632)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:13:30 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 632.
+ 1 APPPATH\Controllers\Home.php(632): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 632)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:13:30 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 632.
+ 1 APPPATH\Controllers\Home.php(632): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 632)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:13:30 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 632.
+ 1 APPPATH\Controllers\Home.php(632): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 632)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:13:31 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 632.
+ 1 APPPATH\Controllers\Home.php(632): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 632)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:13:31 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 632.
+ 1 APPPATH\Controllers\Home.php(632): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 632)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:13:31 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 632.
+ 1 APPPATH\Controllers\Home.php(632): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 632)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:13:32 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 632.
+ 1 APPPATH\Controllers\Home.php(632): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 632)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:13:32 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 632.
+ 1 APPPATH\Controllers\Home.php(632): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 632)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:13:32 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 632.
+ 1 APPPATH\Controllers\Home.php(632): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 632)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:13:38 --> Undefined property: CodeIgniter\Autoloader\Autoloader::$load
+in APPPATH\Controllers\Home.php on line 4.
+ 1 APPPATH\Controllers\Home.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Autoloader\\Autoloader::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 4)
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(306): include_once('D:\\lelang\\app\\Controllers\\Home.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\lelang\\app\\Controllers\\Home.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 6 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Home', true)
+ 7 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:13:49 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:14:00 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:14:01 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:14:03 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:14:21 --> Too few arguments to function App\Controllers\Home::pdf(), 0 passed in D:\lelang\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 631.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:14:28 --> Too few arguments to function App\Controllers\Home::pdf(), 0 passed in D:\lelang\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 631.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-02 11:14:33 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')

@@ -1,0 +1,24 @@
+CRITICAL - 2023-12-04 04:53:11 --> Undefined property: App\Controllers\Home::$Gudang
+in APPPATH\Controllers\Home.php on line 656.
+ 1 APPPATH\Controllers\Home.php(656): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$Gudang', 'D:\\lelang\\app\\Controllers\\Home.php', 656)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->excel()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-04 04:57:35 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-12-04 05:09:32 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 633.
+ 1 APPPATH\Controllers\Home.php(633): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\lelang\\app\\Controllers\\Home.php', 633)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')

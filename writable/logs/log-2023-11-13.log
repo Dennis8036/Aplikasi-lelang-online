@@ -1,0 +1,21 @@
+CRITICAL - 2023-11-13 02:01:57 --> Unclosed '{' on line 30
+in APPPATH\Views\menu.php on line 79.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('menu', [], true)
+ 3 APPPATH\Controllers\Home.php(30): view('menu')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->barang()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
+CRITICAL - 2023-11-13 02:05:34 --> Illegal offset type
+in SYSTEMPATH\Database\BaseBuilder.php on line 740.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(698): CodeIgniter\Database\BaseBuilder->whereHaving('QBWhere', Object(stdClass), null, 'AND ', null)
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1739): CodeIgniter\Database\BaseBuilder->where(Object(stdClass))
+ 3 APPPATH\Models\Gudang.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Object(stdClass))
+ 4 APPPATH\Controllers\Home.php(139): App\Models\Gudang->getWhere('tb_masyarakat', Object(stdClass))
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->aksi_login()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')

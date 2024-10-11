@@ -1,0 +1,45 @@
+ERROR - 2024-01-09 07:10:33 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\lelang\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\lelang\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'lelang', 3306, '', 0)
+#1 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\lelang\app\Models\Gudang.php(70): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\lelang\app\Controllers\Home.php(321): App\Models\Gudang->joinnelson('tb_lelang', 'tb_barang', 'tb_petugas', 'tb_masyarakat', 'tb_lelang.id_ba...', 'tb_lelang.id_pe...', 'tb_lelang.id_us...', 'tb_lelang.id_le...')
+#6 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->lelang()
+#7 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\lelang\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\lelang\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\lelang\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\lelang\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\lelang\app\Models\Gudang.php(70): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\lelang\app\Controllers\Home.php(321): App\Models\Gudang->joinnelson('tb_lelang', 'tb_barang', 'tb_petugas', 'tb_masyarakat', 'tb_lelang.id_ba...', 'tb_lelang.id_pe...', 'tb_lelang.id_us...', 'tb_lelang.id_le...')
+#5 D:\lelang\system\CodeIgniter.php(919): App\Controllers\Home->lelang()
+#6 D:\lelang\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\lelang\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\lelang\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 D:\lelang\system\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\publi...')
+#10 {main}
+CRITICAL - 2024-01-09 07:10:33 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_lelang`
+LEFT JOIN `tb_barang` ON `tb_lelang`.`id_barang`=`tb_barang`.`id_barang`
+LEFT JOIN `tb_petugas` ON `tb_lelang`.`id_petugas`=`tb_petugas`.`id_petugas`
+LEFT JOIN `tb_masyarakat` ON `tb_lelang`.`id_user`=`tb_masyarakat`.`id_user`
+ORDER BY `tb_lelang`.`id_lelang` DESC', [], false)
+ 3 APPPATH\Models\Gudang.php(70): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(321): App\Models\Gudang->joinnelson('tb_lelang', 'tb_barang', 'tb_petugas', 'tb_masyarakat', 'tb_lelang.id_barang=tb_barang.id_barang', 'tb_lelang.id_petugas=tb_petugas.id_petugas', 'tb_lelang.id_user=tb_masyarakat.id_user', 'tb_lelang.id_lelang')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->lelang()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\lelang\\public\\index.php')
